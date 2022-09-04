@@ -14,3 +14,10 @@ def text_generator():
         max_length= 20,
         num_return_sequences = 1,
     )
+
+def text_classifier():
+    classifier = pipeline("zero-shot-classification")
+    return classifier(
+        "I want to learn more",
+        candidate_labels= ["education", "politics", "business"]
+    )
