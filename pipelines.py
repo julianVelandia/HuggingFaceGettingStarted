@@ -21,3 +21,9 @@ def text_classifier():
         "I want to learn more",
         candidate_labels= ["education", "politics", "business"]
     )
+
+def text_summarization():
+    summarizer  = pipeline("summarization")
+    return summarizer (
+        "Eureka is a Rest-API project for Web Scraping, data cleaning and organization, based on FastAPI and following a hexagonal architecture."
+    )
